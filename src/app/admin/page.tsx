@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { Manifest, Section, ResourceItem } from "@/types/resources";
 
 const PUBLIC_URL = "https://resources.holismandevolution.com";
@@ -32,6 +32,8 @@ export default function AdminPage() {
   const [manifest, setManifest] = useState<Manifest | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [addingSectionName, setAddingSectionName] = useState<string | null>(null);
+  const newSectionRef = useRef<HTMLInputElement>(null);
 
   async function login() {
     setBusy(true);
@@ -60,11 +62,13 @@ export default function AdminPage() {
     }
   }
 
-  function addSection() {
-    persist({
+  async function confirmAddSection() {
+    const heading = (addingSectionName ?? "").trim() || "Untitled Section";
+    setAddingSectionName(null);
+    await persist({
       sections: [
         ...(manifest?.sections ?? []),
-        { id: crypto.randomUUID(), heading: "New Section", resources: [] },
+        { id: crypto.randomUUID(), heading, resources: [] },
       ],
     });
   }
@@ -170,13 +174,45 @@ export default function AdminPage() {
         </div>
         <div className="flex items-center gap-3">
           {busy && <span className="text-ink-muted text-sm">Saving…</span>}
-          <button
-            onClick={addSection}
-            disabled={busy}
-            className="bg-accent text-page px-4 py-2 text-sm tracking-wider uppercase hover:bg-accent-hover transition-colors disabled:opacity-50"
-          >
-            + Add Section
-          </button>
+          {addingSectionName === null ? (
+            <button
+              onClick={() => {
+                setAddingSectionName("");
+                setTimeout(() => newSectionRef.current?.focus(), 0);
+              }}
+              disabled={busy}
+              className="bg-accent text-page px-4 py-2 text-sm tracking-wider uppercase hover:bg-accent-hover transition-colors disabled:opacity-50"
+            >
+              + Add Section
+            </button>
+          ) : (
+            <div className="flex items-center gap-2">
+              <input
+                ref={newSectionRef}
+                value={addingSectionName}
+                onChange={(e) => setAddingSectionName(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") confirmAddSection();
+                  if (e.key === "Escape") setAddingSectionName(null);
+                }}
+                placeholder="Section name"
+                className="border border-accent px-3 py-2 text-sm text-ink focus:outline-none w-48"
+              />
+              <button
+                onClick={confirmAddSection}
+                disabled={busy}
+                className="bg-accent text-page px-3 py-2 text-sm tracking-wider uppercase hover:bg-accent-hover transition-colors disabled:opacity-50"
+              >
+                Create
+              </button>
+              <button
+                onClick={() => setAddingSectionName(null)}
+                className="text-sm text-ink-muted hover:text-ink transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
