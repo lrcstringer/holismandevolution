@@ -1,6 +1,6 @@
 import { getManifest, PUBLIC_URL } from "@/lib/r2";
 
-export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 const TYPE_LABEL: Record<string, string> = {
   pdf: "PDF",

@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getManifest, saveManifest } from "@/lib/r2";
 import type { Manifest } from "@/types/resources";
 
+export const runtime = "edge";
+
 function authed(req: Request): boolean {
   return req.headers.get("x-admin-password") === process.env.ADMIN_PASSWORD;
 }
