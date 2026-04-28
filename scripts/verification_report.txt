@@ -1,0 +1,189 @@
+================================================================================
+EXTRACTION VERIFICATION REPORT
+Generated: 2026-04-26T21:33:59
+================================================================================
+
+ Ch   PDF words    MD words   PDF chars    MD chars    Miss->MD   Miss->PDF  Tildes PDF   Tildes MD
+---------------------------------------------------------------------------------------------------
+  1       6,050       6,050      36,231      36,216           3           3           0           0
+  2       4,888       4,889      29,030      29,015           2           3           0           0
+  3       9,303       9,303      56,222      56,187           3           3           0           0
+  4      10,011      10,012      59,856      59,816           5           6           0           0
+  5      13,829      13,824      82,830      82,748          21          16           0           0
+  6       9,925       9,925      59,451      59,407           6           6           0           0
+  7      12,052      12,048      72,169      72,107          15          11           0           0
+  8      14,113      14,112      86,360      86,304          15          14           0           0
+  9      13,570      13,567      82,276      82,228          13          10           1           1
+ 10      10,537      10,537      63,307      63,280           7           7           0           0
+ 11       9,659       9,657      59,105      59,045           7           5           0           0
+ 12      10,745      10,745      63,724      63,663          14          14           0           0
+
+Column legend:
+  Miss->MD  = words present in PDF sequence but absent at that position in MD
+  Miss->PDF = words present in MD sequence but absent at that position in PDF
+  (First 50 diffs per chapter; counts shown are what was captured, up to 50)
+
+================================================================================
+CHAPTER DETAIL
+================================================================================
+
+--- Chapter 1: The Reform of Fundamental Concepts ---
+  PDF words: 6,050   MD words: 6,050
+  PDF chars: 36,231   MD chars: 36,216
+  Word delta: +0
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 3):
+    summary.--in  mind  to
+
+  Words in MD missing from PDF [Miss->PDF] (first 3):
+    summary  in  mind.to
+
+--- Chapter 2: The Reformed Concepts of Space and Time ---
+  PDF words: 4,888   MD words: 4,889
+  PDF chars: 29,030   MD chars: 29,015
+  Word delta: +1
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 2):
+    ag*e  such*curves
+
+  Words in MD missing from PDF [Miss->PDF] (first 3):
+    age  such  curves
+
+--- Chapter 3: The Reformed Concept of Matter ---
+  PDF words: 9,303   MD words: 9,303
+  PDF chars: 56,222   MD chars: 56,187
+  Word delta: +0
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 3):
+    summary.--coming  in  the
+
+  Words in MD missing from PDF [Miss->PDF] (first 3):
+    summary  coming  in.the
+
+--- Chapter 4: The Cell and the Organism ---
+  PDF words: 10,011   MD words: 10,012
+  PDF chars: 59,856   MD chars: 59,816
+  Word delta: +1
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 5):
+    summary.--the  multitudinous.cells  way*endowed  changes  may
+
+  Words in MD missing from PDF [Miss->PDF] (first 6):
+    summary  the  multitudinouscells  way  endowed  changes,may
+
+--- Chapter 5: General Concept of Holism ---
+  PDF words: 13,829   MD words: 13,824
+  PDF chars: 82,830   MD chars: 82,748
+  Word delta: -5
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 21):
+    summary.--the  past  and  prevailing  mechanistic  an.explication  the  nature  evolution  1
+    the  view  unconscious  g  although*this  mould.alien  and  both  organisms  and
+    we*shall
+
+  Words in MD missing from PDF [Miss->PDF] (first 16):
+    summary  the  past,.and  prevailing.mechanistic  anexplication  the.nature  evolution;1  the.view  unconscious:.g  although
+    this  mouldalien  and.both  organisms..and  we  shall
+
+--- Chapter 6: Some Holistic Functions and Categories ---
+  PDF words: 9,925   MD words: 9,925
+  PDF chars: 59,451   MD chars: 59,407
+  Word delta: +0
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 6):
+    summary.--avoiding  real  differences  and  physicists  as*explain
+
+  Words in MD missing from PDF [Miss->PDF] (first 6):
+    summary  avoiding  real.differences  and.physicists  as  explain
+
+--- Chapter 7: Mechanism and Holism ---
+  PDF words: 12,052   MD words: 12,048
+  PDF chars: 72,169   MD chars: 72,107
+  Word delta: -4
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 15):
+    summary.--the  where*the  and  the  the  great  living  from  the  selective
+    o`f  how  can  a  great
+
+  Words in MD missing from PDF [Miss->PDF] (first 11):
+    summary  the  where  the  and.the  the.great  living.from  the,selective  of  how;can
+    a.great
+
+--- Chapter 8: Darwinism and Holism ---
+  PDF words: 14,113   MD words: 14,112
+  PDF chars: 86,360   MD chars: 86,304
+  Word delta: -1
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 15):
+    summary.---darwin's  of*view  is*on  and*one  of*species  a  change  latter  and  baffled
+    it  adjustments  in  which  operates
+
+  Words in MD missing from PDF [Miss->PDF] (first 14):
+    summary  darwin's  of  view  ison  and  one  of  species  a.change
+    latter.and  baffled.,it  adjustments.in  which.operates
+
+--- Chapter 9: Mind as an Organ of Wholes ---
+  PDF words: 13,570   MD words: 13,567
+  PDF chars: 82,276   MD chars: 82,228
+  Word delta: -3
+
+  TILDE OCCURRENCES:
+  [raw-pdf] pos=2757 pattern='~' ctx=' became active as ad~tension or attention'
+  [md-plain] pos=2682 pattern='~' ctx=' became active as ad~tension or attention'
+
+  Words in PDF missing from MD [Miss->MD] (first 13):
+    summary.--mind  rest  and  and  a  self  only  according.to  the  individual
+    aspects  of  will*thus
+
+  Words in MD missing from PDF [Miss->PDF] (first 10):
+    summary  mind  rest..and  and.a  self.only  accordingto  the.individual  aspects,of  will  thus
+
+--- Chapter 10: Personality as a Whole ---
+  PDF words: 10,537   MD words: 10,537
+  PDF chars: 63,307   MD chars: 63,280
+  Word delta: +0
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 7):
+    summary.--personality  distance.has  a*structure  are  so  tfiat  there
+
+  Words in MD missing from PDF [Miss->PDF] (first 7):
+    summary  personality  distancehas  a  structure  are.so  tfiat.there
+
+--- Chapter 11: Some Functions and Ideals of Personality ---
+  PDF words: 9,659   MD words: 9,657
+  PDF chars: 59,105   MD chars: 59,045
+  Word delta: -2
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 7):
+    summary.--the  feeling  that  character  of  evolution  of
+
+  Words in MD missing from PDF [Miss->PDF] (first 5):
+    summary  the  feeling.that  character.of  evolution.of
+
+--- Chapter 12: The Holistic Universe ---
+  PDF words: 10,745   MD words: 10,745
+  PDF chars: 63,724   MD chars: 63,663
+  Word delta: +0
+  No tilde occurrences found.
+
+  Words in PDF missing from MD [Miss->MD] (first 14):
+    summary.--the  3*7  horizons  rotede  ever*greater  mind  there  an  organism  own*way
+    view  but  wholes*there  that*is
+
+  Words in MD missing from PDF [Miss->PDF] (first 14):
+    summary  the  37  horizons.rotede  ever  greater  mind.there  an.organism  own  way
+    view.,but  wholes  there  thatis
+
+================================================================================
+END OF REPORT
+================================================================================

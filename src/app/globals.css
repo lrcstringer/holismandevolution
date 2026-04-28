@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-page: #ffffff;
+  --color-surface: #f7f7f7;
+  --color-surface-hover: #efefef;
+  --color-border: #e2e2e2;
+  --color-accent: #1a3a5c;
+  --color-accent-hover: #15305a;
+  --color-accent-dim: #3a5a82;
+  --color-ink: #111111;
+  --color-ink-secondary: #555555;
+  --color-ink-muted: #999999;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-garamond);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  font-family: var(--font-garamond), Georgia, serif;
 }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #f7f7f7; }
+::-webkit-scrollbar-thumb { background: #c8c8c8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #999999; }
+
+/* Chapter prose styles — applied via .chapter-prose wrapper */
+.chapter-prose h1,
+.chapter-prose h2,
+.chapter-prose h3,
+.chapter-prose h4 {
+  font-family: var(--font-playfair), Georgia, serif;
+  color: #111111;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.chapter-prose h1 { font-size: 1.6rem; }
+.chapter-prose h2 { font-size: 1.3rem; }
+.chapter-prose h3 { font-size: 1.1rem; }
+.chapter-prose h4 { font-size: 1rem; color: #1a3a5c; }
+
+.chapter-prose p {
+  margin-bottom: 1.1rem;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+.chapter-prose blockquote {
+  border-left: 3px solid #1a3a5c;
+  padding: 0.5rem 1rem;
+  color: #555555;
+  font-style: italic;
+  margin: 1.5rem 0;
+  background: rgba(26, 58, 92, 0.04);
+}
+
+.chapter-prose strong { color: #111111; font-weight: 600; }
+.chapter-prose em { color: #555555; }
+
+.chapter-prose ul,
+.chapter-prose ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.chapter-prose li { margin-bottom: 0.35rem; line-height: 1.7; }
+
+.chapter-prose hr {
+  border: none;
+  border-top: 1px solid #e2e2e2;
+  margin: 2rem 0;
+}
+
+.chapter-prose a {
+  color: #1a3a5c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.chapter-prose code {
+  background: #f7f7f7;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #1a3a5c;
+}
+
+/* Remove redundant outer margin when prose is used in grid-aligned block rows */
+.chapter-prose > *:first-child { margin-top: 0; }
+.chapter-prose > *:last-child { margin-bottom: 0; }
