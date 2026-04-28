@@ -119,6 +119,11 @@ export default function Home() {
         <p className="text-ink-muted text-xs tracking-widest uppercase">
           Holism &amp; Evolution · J. C. Smuts · Centennial Edition
         </p>
+        <p className="text-ink-muted text-xs mt-2">
+          <a href="mailto:info@holismandevolution.com" className="hover:text-accent transition-colors">
+            info@holismandevolution.com
+          </a>
+        </p>
       </footer>
     </div>
   );
