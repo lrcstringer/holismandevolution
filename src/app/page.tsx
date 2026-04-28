@@ -59,9 +59,9 @@ export default function Home() {
           <p className="text-ink-secondary leading-relaxed mb-5">
             First published in 1926,{" "}
             <em className="text-ink">Holism and Evolution</em> by Jan
-            Christiaan Smuts introduced the concept of holism — the
-            philosophical insight that nature tends to produce organised wholes
-            greater than the sum of their parts.
+            Christiaan Smuts introduced the word &ldquo;holism&rdquo; to the
+            English language and his theory that nature tends to produce
+            organised wholes greater than the sum of their parts.
           </p>
           <p className="text-ink-secondary leading-relaxed">
             This centennial edition presents the original text (of the third
