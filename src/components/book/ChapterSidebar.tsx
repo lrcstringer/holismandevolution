@@ -43,11 +43,13 @@ export default function ChapterSidebar({
                 }`}
               >
                 <span
-                  className={`text-xs pt-0.5 shrink-0 font-mono tabular-nums ${
+                  className={`text-xs pt-0.5 shrink-0 font-mono tabular-nums w-5 ${
                     isActive ? "text-accent" : "text-ink-muted"
                   }`}
                 >
-                  {String(ch.number).padStart(2, "0")}
+                  {ch.label === undefined
+                    ? String(ch.number).padStart(2, "0")
+                    : "·"}
                 </span>
                 <span
                   className={`text-sm leading-snug font-heading ${

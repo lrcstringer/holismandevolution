@@ -70,9 +70,15 @@ export default function BookReader({ chapters }: Props) {
         </button>
 
         <div className="flex-1 text-center">
-          <span className="text-accent text-xs tracking-[0.2em] uppercase mr-2 font-heading">
-            Ch {active.number}
-          </span>
+          {active.label === undefined ? (
+            <span className="text-accent text-xs tracking-[0.2em] uppercase mr-2 font-heading">
+              Ch {active.number}
+            </span>
+          ) : active.label ? (
+            <span className="text-accent text-xs tracking-[0.2em] uppercase mr-2 font-heading">
+              {active.label}
+            </span>
+          ) : null}
           <span className="text-ink text-sm font-heading">{active.title}</span>
           <span className="text-ink-muted text-xs ml-3 opacity-60">
             {activeIndex + 1} / {chapters.length}
