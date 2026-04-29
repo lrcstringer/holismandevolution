@@ -80,7 +80,7 @@ export default function Home() {
               href: "/book",
               title: "Read",
               description:
-                "Compare the original 1926 text and the modernised version side by side across all twelve chapters.",
+                "Compare the original text and the modernised version side by side across all twelve chapters.",
               label: "Open Reader →",
             },
             {
