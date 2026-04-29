@@ -57,8 +57,8 @@ export default function Home() {
             About This Edition
           </h2>
           <p className="text-ink-secondary leading-relaxed mb-5">
-            First published in 1926,{" "}
-            <em className="text-ink">Holism and Evolution</em> by Jan
+            First published in 1926, &ldquo;
+            <em className="text-ink">Holism and Evolution</em>&rdquo; by Jan
             Christiaan Smuts introduced the word &ldquo;holism&rdquo; to the
             English language and his theory that nature tends to produce
             organised wholes greater than the sum of their parts.
