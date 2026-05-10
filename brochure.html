@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holism Rising — Brochure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark:      #091c2b;
+      --dark-mid:  #0d2840;
+      --gold:      #c8943a;
+      --gold-lt:   #e8c060;
+      --gold-dim:  #7a5f25;
+      --gold-label: #b8922e;
+      --cream:     #f5ead8;
+      --text-on-dark: #d4c49a;
+      --text-body: #1e1208;
+      --text-body2: #3d2f18;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #2e2e2e;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 32px 20px;
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    /* ── PAGE ── */
+    .page {
+      width: 794px;
+      height: 1123px;
+      background: var(--dark);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 0 1px var(--gold-dim), 0 24px 80px rgba(0,0,0,0.7);
+    }
+
+    /* Inner gold border */
+    .page::before {
+      content: '';
+      position: absolute;
+      inset: 9px;
+      border: 1px solid rgba(200,148,58,0.3);
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      padding: 44px 44px 40px;
+      gap: 40px;
+      height: 430px;
+      flex: 0 0 430px;
+    }
+
+    /* Book cover */
+    .cover-wrap {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+    }
+    .cover-wrap img {
+      width: 218px;
+      height: 327px;
+      object-fit: cover;
+      display: block;
+      box-shadow:
+        0 0 0 1px var(--gold-dim),
+        0 0 0 5px var(--dark),
+        0 0 0 6px rgba(200,148,58,0.35),
+        0 20px 50px rgba(0,0,0,0.7);
+    }
+
+    /* Title block */
+    .header-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .series-line {
+      font-family: 'Cinzel', serif;
+      font-size: 8.5px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold-label);
+      margin-bottom: 18px;
+    }
+
+    .main-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      text-shadow: 0 2px 24px rgba(232,192,96,0.25);
+      margin-bottom: 22px;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-on-dark);
+      line-height: 1.65;
+      margin-bottom: 26px;
+      opacity: 0.88;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    .ornament-line { flex: 1; height: 1px; background: var(--gold-dim); max-width: 50px; }
+    .ornament-diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--gold-dim);
+      transform: rotate(45deg);
+    }
+
+    .author {
+      font-family: 'Cinzel', serif;
+      font-size: 10.5px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── GOLD RULE ── */
+    .gold-rule {
+      flex: 0 0 1px;
+      margin: 0 44px;
+      background: linear-gradient(to right, transparent, var(--gold-dim), var(--gold), var(--gold-dim), transparent);
+    }
+
+    /* ── BODY ── */
+    .body {
+      flex: 1;
+      background: var(--cream);
+      padding: 34px 50px 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .body-intro {
+      font-size: 11.5px;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 22px;
+    }
+    .body-intro p + p { margin-top: 13px; }
+
+    .drop-cap::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 0.8;
+      float: left;
+      margin-right: 6px;
+      margin-top: 6px;
+      color: var(--gold-dim);
+    }
+
+    .themes-label {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--text-body2);
+      margin-bottom: 12px;
+      margin-top: 4px;
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 36px;
+      margin-bottom: 20px;
+    }
+
+    .theme-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 10.5px;
+      color: var(--text-body2);
+      line-height: 1.4;
+    }
+    .theme-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      flex: 0 0 4px;
+    }
+
+    .body-close {
+      font-size: 11px;
+      line-height: 1.75;
+      color: var(--text-body2);
+      font-style: italic;
+      border-left: 2px solid rgba(122,95,37,0.4);
+      padding-left: 16px;
+      margin-top: auto;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      flex: 0 0 auto;
+      background: var(--dark-mid);
+      border-top: 1px solid rgba(200,148,58,0.25);
+      padding: 26px 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .buy-block { display: flex; flex-direction: column; gap: 6px; }
+
+    .buy-btn {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 9.5px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--dark);
+      background: var(--gold);
+      padding: 10px 26px;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    .buy-url {
+      font-family: 'Lora', serif;
+      font-size: 8.5px;
+      color: var(--gold-label);
+      letter-spacing: 0.05em;
+      font-style: italic;
+    }
+
+    .qr-placeholder {
+      width: 62px;
+      height: 62px;
+      border: 1px solid var(--gold-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .qr-label {
+      font-family: 'Cinzel', serif;
+      font-size: 6px;
+      letter-spacing: 0.2em;
+      color: var(--gold-dim);
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(200,148,58,0.18);
+    }
+
+    .website-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .website-text { display: flex; flex-direction: column; gap: 4px; }
+
+    .website-also {
+      font-family: 'Cinzel', serif;
+      font-size: 7.5px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold-label);
+    }
+
+    .website-url {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      color: var(--gold-lt);
+    }
+
+    .website-desc {
+      font-family: 'Lora', serif;
+      font-size: 9.5px;
+      color: var(--text-on-dark);
+      opacity: 0.65;
+      font-style: italic;
+      line-height: 1.55;
+      max-width: 340px;
+    }
+
+    .website-badge {
+      border: 1px solid rgba(200,148,58,0.3);
+      padding: 10px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      flex: 0 0 auto;
+    }
+    .badge-label {
+      font-family: 'Cinzel', serif;
+      font-size: 7px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-label);
+    }
+    .badge-value {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--text-on-dark);
+      white-space: nowrap;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      @page { size: A4 portrait; margin: 0; }
+      body { background: none; padding: 0; margin: 0; }
+      .page {
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <!-- Book cover -->
+      <div class="cover-wrap">
+        <img src="public/holism_rising_upscaled_300dpi.png" alt="Holism Rising" />
+      </div>
+
+      <!-- Title block -->
+      <div class="header-text">
+        <p class="series-line">Jan Smuts&rsquo; Holism &amp; Evolution &mdash; Centennial Series</p>
+
+        <h1 class="main-title">Holism<br>Rising</h1>
+
+        <p class="subtitle">
+          The Amazing Theory of Holism<br>
+          Vindicated by Modern Science
+        </p>
+
+        <div class="ornament">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
+        </div>
+
+        <p class="author">Lance Robert Stringer</p>
+      </div>
+
+    </div><!-- /header -->
+
+    <div class="gold-rule"></div>
+
+    <!-- BODY -->
+    <div class="body">
+
+      <div class="body-intro">
+        <p class="drop-cap">
+          One hundred years ago, the statesman, scientist, and philosopher Jan Christiaan Smuts
+          introduced the word &ldquo;holism&rdquo; to the English language in his landmark book
+          <em>Holism and Evolution</em>. His theory was bold: that the Universe has an inherent tendency
+          to form increasingly integrated and complex wholes &mdash; and that the causal powers of those
+          wholes exceed the sum of their parts.
+        </p>
+        <p>
+          Although limited to the science of his day, Smuts proved to be spectacularly far-seeing. Today,
+          across the biological sciences and quantum theory alike, modern research has vindicated him.
+          His insights were not mystical notions but empirical observations about how the Universe
+          actually operates.
+        </p>
+      </div>
+
+      <p class="themes-label">Explore</p>
+      <div class="themes-grid">
+        <div class="theme-item"><div class="theme-dot"></div>How bodies develop &amp; cells make decisions</div>
+        <div class="theme-item"><div class="theme-dot"></div>Quantum foundations of reality</div>
+        <div class="theme-item"><div class="theme-dot"></div>Epigenetics &amp; the responsive genome</div>
+        <div class="theme-item"><div class="theme-dot"></div>How evolution creates novelty</div>
+        <div class="theme-item"><div class="theme-dot"></div>Electrical conversations between organs</div>
+        <div class="theme-item"><div class="theme-dot"></div>From quantum fields to human personality</div>
+      </div>
+
+      <p class="body-close">
+        In <em>Holism Rising</em>, these threads are brought together in a vivid, accessible narrative.
+        You will encounter scientists coaxing animals to grow two heads, making cells sprout eyes in
+        impossible places, and mapping the electrical conversations between organs. Our best physics
+        theories confirm that the very foundations of reality are fundamentally holistic &mdash; from
+        quantum fields to life, to mind, to the ultimate whole: the human personality.
+      </p>
+
+    </div><!-- /body -->
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+      <div class="footer-top">
+        <div class="buy-block">
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0GZCTQ526">
+            Buy on Amazon &rsaquo;
+          </a>
+          <span class="buy-url">amazon.com/dp/B0GZCTQ526</span>
+        </div>
+        <div class="website-badge">
+          <span class="badge-label">Available in</span>
+          <span class="badge-value">Paperback &amp; eBook</span>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="website-row">
+        <div class="website-text">
+          <span class="website-also">Also explore</span>
+          <span class="website-url">holismandevolution.com</span>
+          <span class="website-desc">
+            Read the original <em>Holism and Evolution</em> (third edition) alongside its
+            centennial modernisation &mdash; free online, with a dual-pane reader for
+            comparing both versions chapter by chapter.
+          </span>
+        </div>
+      </div>
+
+    </div><!-- /footer -->
+
+  </div><!-- /page -->
+</body>
+</html>
